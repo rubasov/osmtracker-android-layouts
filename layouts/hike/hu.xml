@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Custom osmtracker-android button layout
+for hiking
+by Bence Romsics
+
+https://github.com/labexp/osmtracker-android/wiki/Custom-buttons-layouts
+https://github.com/labexp/osmtracker-android-layouts/wiki
+<button type="page" label="..." targetlayout="page2"/>
+<button type="tag" label="Airport" icon="airport.png"/>
+<button type="page" label="Land use" targetlayout="landuse"/>
+
+https://wiki.openstreetmap.org/
+
+https://wiki.openstreetmap.org/wiki/Lifecycle_prefix
+https://wiki.openstreetmap.org/wiki/Key:operational_status
+https://wiki.openstreetmap.org/wiki/Key:access
+https://wiki.openstreetmap.org/wiki/Key:source
+https://wiki.openstreetmap.org/wiki/Key:check_date
+
+https://wiki.openstreetmap.org/wiki/Key:direction
+
+-->
+<layouts>
+  <layout name="root">
+    <row>
+      <button type="page" label="Tájékozódás >" targetlayout="navigation"/>
+      <button type="page" label="Akadály >" targetlayout="barrier"/>
+    </row>
+    <row>
+      <button type="page" label="Épített >" targetlayout="manmade"/>
+      <button type="page" label="Víz >" targetlayout="water"/>
+    </row>
+    <row>
+      <button type="tag" label="tábor függőágy"/>
+      <button type="tag" label="tábor sátor"/>
+      <button type="tag" label="."/>
+    </row>
+    <row>
+      <button type="textnote" label="Text note" icon="text.png" iconpos="left"/>
+    </row>
+  </layout>
+  <layout name="navigation">
+    <row>
+      <!--
+      tourism=information
+      information=guidepost
+      -->
+      <button type="tag" label="tájékozódási tábla"/>
+      <!--
+      tourism=information
+      information=board
+      board_type=nature
+      -->
+      <button type="tag" label="oktató tábla"/>
+      <!--
+      tourism=information
+      information=board
+      board_type=notice
+      board_type=rules
+      description=fokozottan védett természeti terület
+      -->
+      <button type="tag" label="fvtt"/>
+    </row>
+    <row>
+      <!--
+      checkpoint=hiking
+      checkpoint:type=code
+      -->
+      <button type="tag" label="kód tábla"/>
+      <!--
+      checkpoint=hiking
+      checkpoint:type=code
+      -->
+      <button type="tag" label="kód festett"/>
+      <!--
+      checkpoint=hiking
+      checkpoint:type=stamp
+      -->
+      <button type="tag" label="pecsét"/>
+    </row>
+    <row>
+      <!--
+      natural=peak
+      -->
+      <button type="tag" label="hegycsúcs"/>
+      <!--
+      natural=saddle
+      -->
+      <button type="tag" label="nyereg"/>
+      <!--
+      tourism=viewpoint
+      direction=...
+      -->
+      <button type="tag" label="kilátás"/>
+    </row>
+    <row>
+      <!--
+      man_made=survey_point
+      ref=
+      url=https://map.fomi.hu/alappont/
+      -->
+      <button type="tag" label="földmérési alappont"/>
+      <!--
+      man_made=cairn
+      -->
+      <button type="tag" label="kőrakás"/>
+    </row>
+  </layout>
+  <layout name="barrier">
+    <row>
+      <!--
+      barrier=swing_gate
+      locked=yes/no
+      -->
+      <button type="tag" label="sorompó"/>
+      <!--
+      barrier=turnstile
+      -->
+      <button type="tag" label="forgókapu"/>
+    </row>
+    <row>
+      <!--
+      obstacle=fallen_tree
+      -->
+      <button type="tag" label="útra dőlt fa"/>
+      <!--
+      ford=yes
+      -->
+      <button type="tag" label="gázló"/>
+    </row>
+    <row>
+      <!--
+      barrier=fence
+      -->
+      <button type="tag" label="kerítés bal start"/>
+      <button type="tag" label="kerítés szemben"/>
+      <button type="tag" label="kerítés jobb start"/>
+    </row>
+    <row>
+      <button type="tag" label="kerítés bal end"/>
+      <!--
+      barrier=stile
+      stile=ladder
+      -->
+      <button type="tag" label="vadkerítés létrája"/>
+      <button type="tag" label="kerítés jobb end"/>
+    </row>
+  </layout>
+  <layout name="manmade">
+    <row>
+      <!--
+      amenity=shelter
+      shelter_type=weather_shelter
+      -->
+      <button type="tag" label="esőmenedék"/>
+      <!--
+      tourism=picnic_site
+      -->
+      <button type="tag" label="asztal"/>
+      <!--
+      amenity=bench
+      -->
+      <button type="tag" label="pad"/>
+    </row>
+    <row>
+      <!--
+      leisure=firepit
+      -->
+      <button type="tag" label="tűzrakó hely"/>
+      <!--
+      amenity=toilets
+      toilets:disposal=pitlatrine
+      -->
+      <button type="tag" label="pottyantós budi"/>
+    </row>
+    <row>
+      <!--
+      man_made=tower
+      tower:type=observation
+      -->
+      <button type="tag" label="kilátó"/>
+      <!--
+      building=yes
+      -->
+      <button type="tag" label="épület"/>
+    </row>
+    <row>
+      <!--
+      bridge=yes
+      -->
+      <button type="tag" label="híd"/>
+      <!--
+      tunnel=culvert
+      -->
+      <button type="tag" label="culvert"/>
+    </row>
+    <row>
+      <!--
+      amenity=game_feeding
+      -->
+      <button type="tag" label="vadetető"/>
+      <!--
+      amenity=hunting_stand
+      -->
+      <button type="tag" label="magasles"/>
+    </row>
+  </layout>
+  <layout name="water">
+    <!--
+    amenity=drinking_water
+    -->
+    <row>
+      <!--
+      fountain=drinking
+      -->
+      <button type="tag" label="nyomókaros kék kút"/>
+      <button type="tag" label="fordítókaros kék kút"/>
+      <!--
+      pump=manual
+      -->
+      <button type="tag" label="pumpálókaros kút"/>
+    </row>
+    <row>
+      <!--
+      man_made=water_tap
+      -->
+      <button type="tag" label="nyomógombos csap"/>
+      <button type="tag" label="fordítókaros csap"/>
+    </row>
+    <row>
+      <!--
+      natural=spring
+      refitted=yes/no
+      -->
+      <button type="tag" label="foglalt kifolyócsöves forrás"/>
+      <button type="tag" label="foglalt merítős forrás"/>
+      <button type="tag" label="foglalatlan forrás"/>
+    </row>
+    <row>
+      <!--
+      intermittent=yes/no
+      seasonal=yes/no
+      drinking_water=yes/no
+      drinking_water:legal=yes/no
+      -->
+      <button type="tag" label="tiszta víz"/>
+      <button type="tag" label="problémás víz"/>
+      <button type="tag" label="nincs víz"/>
+    </row>
+  </layout>
+</layouts>
